@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
+@font-face {
+    font-family: avenir;
+    src: url("./avenir_ff/AvenirLTStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: avenirb;
+  src: url("./avenir_ff/AvenirLTStd-Black.otf") format("opentype");
+}
+.page {
+  display: flex;
+  justify-content: space-between;
+  margin: 7vh 13.5vw 0;
+}
+.AddProduct {
+    width: 33vw;
+}
+.AddProduct form {
+  display: flex;
+  flex-direction: column;
+}
+.AddProduct h4{
+    font-weight: 900;
+    font-size: 24px;
+    font-family: avenirb;
+    margin-bottom: 26px;
+    color: #613D2B;
+}
+.AddProduct input{
+    background: rgba(97, 61, 43, 0.25);
+    border: 2px solid #613D2B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #1F1F1F;
+    font-family: avenir;
+    padding-left: 10px;
+    width: 33vw;
+    height: 6vh;
+    margin-bottom: 2.5vh;
+}
+.AddProduct .inputFile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6vh;
+    text-align: center;
+    padding-left: 0;
+    border: 2px solid #613D2B;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: rgba(97, 61, 43, 0.25);
+    font-size: 18px;
+    color: #1F1F1F;
+    font-family: avenir;
+    width: 13vw;
+    height: 6vh;
+    color: rgba(97, 61, 43, 0.6);
+}
+.inputFile p {
+  margin-top: 0.7em;
+  margin-left: 0.5em;
+}
+.inputFile img {
+  margin-right: 0.5em;
+}
+.AddProduct .inputDesc {
+  height: 15vh;
+  padding-top: 0.7em;
+  margin-bottom: 2.5vh;
+}
+.AddProduct .btnSave {
+    width: 260px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: #613D2B;
+    border-radius: 5px;
+    border: none;
+    margin-top: 4vh;
+    align-self: center;
+}
+.preview img{
+  width: 30.3vw;
+  height: 68vh;
+}
+.vanish {
+  display: none;
+}

@@ -1,0 +1,133 @@
+@font-face {
+    font-family: avenir;
+    src: url("./avenir_ff/AvenirLTStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: avenirb;
+  src: url("./avenir_ff/AvenirLTStd-Black.otf") format("opentype");
+}
+.Shipment {
+  display: flex;
+  margin-top: 9vh;
+  justify-content: space-between;
+}
+.ShipmentL {
+  margin-left: 14vw;
+}
+.ShipmentL h4 {
+  color: #613D2B;
+  font-weight: 900;
+  font-size: 24px;
+  font-family: avenirb;
+  margin-bottom: 1em;
+}
+.ShipmentForm {
+  display: flex;
+  flex-direction: column;
+}
+.ShipmentForm input, textarea, label{
+  width: 33vw;
+  height: 3em;
+  background: rgba(97, 61, 43, 0.25);
+  border: 2px solid #613D2B;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 15px;
+  padding-left: 0.5em;
+  margin-bottom: 0.5em;
+}
+.ShipmentForm .inputAddress{
+  height: 6em;
+  padding-top: 0.5em;
+}
+.attachment {
+  display: flex;
+  justify-content: space-between;
+}
+.ShipmentForm .inputFile{
+  width: 18vw;
+  color: rgba(97, 61, 43, 0.6);
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1em;
+  align-items: center;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  margin-right: 14vw;
+}
+.products button{
+  margin-top: 1em;
+  height: 2em;
+  background: #613D2B;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product {
+  width: 36vw;
+  height: 18vh;
+  background-color: #F6E6DA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product .detailProduct {
+  display: flex;
+}
+.product .wbIcon {
+  width: 5vw;
+  height: 3vh;
+  margin-bottom: 12vh;
+  margin-right: 2em;
+}
+.detailProduct img {
+  width: 5.6vw;
+  height: 15vh;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.detailProduct .number {
+  display: flex;
+  flex-direction: column;
+}
+.number .productName{
+  margin-bottom: 1.5em;
+  font-weight: 900;
+  font-size: 14px;
+  font-family: avenirb;
+  color: #613D2B;
+}
+.number .productPrice, .productQty{
+  margin-bottom: 0.3em;
+  font-size: 10px;
+  font-family: avenir;
+  color: #974A4A;
+}
+.number .subTotal{
+  margin-bottom: 0;
+  font-weight: 900;
+  font-size: 10px;
+  font-family: avenirb;
+  color: #974A4A;
+}
+.popup {
+  width: 669px;
+  height: 63px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popText {
+  font-size: 24px;
+  font-family: avenir;
+  text-align: center;
+  color: #469F74;
+  margin: auto;
+}

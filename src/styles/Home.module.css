@@ -1,0 +1,180 @@
+@font-face {
+  font-family: avenir;
+  src: url("./avenir_ff/AvenirLTStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: avenirb;
+  src: url("./avenir_ff/AvenirLTStd-Black.otf") format("opentype");
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+.Header {
+  margin-bottom: 0;
+}
+.Hero {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/*Nav*/
+.icon {
+  padding-left: 65px;
+}
+nav {
+  padding-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f5f5;
+  height: 91px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-right: 49px;
+}
+
+/*Login-Register*/
+.RegisterBTN, .LoginBTN {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.LoginBTN {
+  background: #f5f5f5;
+  color: #613D2B;
+  border: 2px solid #613D2B;
+}
+.RegisterBTN {
+  margin-left: 15px;
+  background: #613D2B;
+  color: #FFFFFF;
+  border: none;
+}
+.modalform {
+  width: 416px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.formTitle {
+  font-family: avenirb;
+  font-weight: 900;
+  font-size: 36px;
+  color: #613D2B;
+}
+.modalBody {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form input {
+  background: rgba(97, 61, 43, 0.25);
+  border: 2px solid #613D2B;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 350px;
+  height: 50px;
+  padding-left: 1em;
+  margin-bottom: 20px;
+}
+.form button {
+  background: #613D2B;
+  border-radius: 5px;
+  width: 350px;
+  height: 50px;
+  margin-top: 9px;
+  font-family: avenirb;
+  font-weight: 900;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+.formFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formFooter p{
+  font-size: 18px;
+  font-family: avenir;
+  color: #000000;
+}
+.footerLink {
+  font-family: avenirb;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/*Dropdown*/
+.buttons .avatar {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #433434;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin-left: 23px;
+}
+.dropdownItem{
+  width: 230px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.dropdownItem:hover{
+  background: #FFFFFF;
+}
+.dropdownPict{
+  height: 40px;
+  width: 40px;
+  margin-left: 20px;
+}
+.dropdownText{
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 15px;
+  line-height: 33px;
+  color: #000000;
+}
+
+/*products*/
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1047px;
+  margin: 42px auto;
+}
+.product {
+  background: #F6E6DA;
+  color: #613D2B;
+  margin-bottom: 1em;
+}
+.product img {
+  width: 241px;
+  height: 312px;
+}
+.product .productName {
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-family: avenir;
+  font-weight: 900;
+  font-size: 18px;
+  margin-left: 16px;
+}
+.product .productDesc {
+  margin-top: 5px;
+  margin-left: 16px;
+  color: #974A4A;
+  font-size: 14px;
+  font-family: avenir;
+}

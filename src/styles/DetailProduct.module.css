@@ -1,0 +1,62 @@
+@font-face {
+  font-family: avenir;
+  src: url("./avenir_ff/AvenirLTStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: avenirb;
+  src: url("./avenir_ff/AvenirLTStd-Black.otf") format("opentype");
+}
+.product {
+  display: flex;
+  width: 72vw;
+  margin: 8vh auto;
+  justify-content: space-between;
+}
+.product .productImage {
+  height: 69vh;
+  width: 30vw !important;
+  margin-right: 4vw;
+}
+.product .desc {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+}
+.desc p {
+  margin-bottom: 0;
+}
+.desc .productName {
+  font-weight: 900;
+  font-size: 48px;
+  color: #613D2B;
+  font-family: avenirb;
+}
+.desc .productStock {
+  font-size: 18px;
+  color: #974A4A;
+  font-family: avenir;
+}
+.desc .productDesc {
+  font-size: 18px;
+  color: #000000;
+  text-align: justify;
+  font-family: avenir;
+  margin-top: 1.2em;
+}
+.desc .productPrice {
+  font-size: 24px;
+  color: #974A4A;
+  font-family: avenirb;
+  font-weight: 900;
+  margin-top: 0.5em;
+  align-self: flex-end;
+} 
+.desc .productBTN {
+  margin-top: 1.7em;
+  background-color: #613D2B;
+  border-radius: 5px;
+  border: none;
+  font-family: avenir;
+  font-size: 18px;
+  color: #FFFFFF;
+}

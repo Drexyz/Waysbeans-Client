@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap');
+@font-face {
+    font-family: avenir;
+    src: url("./avenir_ff/AvenirLTStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: avenirb;
+  src: url("./avenir_ff/AvenirLTStd-Black.otf") format("opentype");
+}
+
+.page {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9.5vh;
+}
+.page h4 {
+  color: #613D2B;
+  font-family: avenirb;
+  font-weight: 900;
+  font-size: 24px;
+}
+.mainProfile {
+    display: flex;
+    margin-left: 10vw; 
+    justify-content: space-around;
+}
+.myProfile .infoPerson{
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 21px;
+}
+.myProfile .infoPerson img {
+    width: 180px;
+    height: 221.79px;
+    margin-right: 28px;
+}
+.infoPerson article {
+    font-family: avenir;
+}
+.infoPerson h5 {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: #613D2B;
+}
+.infoPerson p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10vw;
+}
+.product {
+  width: 36vw;
+  height: 18vh;
+  background-color: #F6E6DA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.product .detailProduct {
+  display: flex;
+}
+.product .productr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+}
+.productr .wbIcon {
+  width: 5vw;
+  height: 3vh;
+  margin-bottom: 10px;
+}
+.productr .qr {
+  height: 6vh;
+  width: 3.5vw;
+}
+.productr div{
+  width: 112px;
+  height: 19px;
+  background: linear-gradient(180deg, rgba(0, 255, 117, 0.1) 0%, rgba(0, 255, 133, 0.1) 100%);
+  border-radius: 2px;
+  font-family: avenir;
+  font-weight: 500;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #00FF47;
+  margin-top: 13px;
+}
+.productr .status{
+  background: #caf8ad;
+  color: #78A85A;
+}
+.productr .statusw{
+  background-color: #ffd085d0;
+  color: #FF9900;
+}
+.productr .statuso{
+  background: #613D2B;
+  color: #FFFFFF;
+  border-radius: 2px;
+  border: none;
+  font-family: avenir;
+  font-weight: 500;
+  font-size: 10px;
+  width: 112px;
+  height: 19px;
+  margin-top: 13px;
+}
+.productr .statusc{
+  background-color: rgb(255, 179, 179);
+  color: red;
+}
+.detailProduct img {
+  width: 5.6vw;
+  height: 15vh;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.detailProduct .number {
+  display: flex;
+  flex-direction: column;
+}
+.number .productName{
+  margin-bottom: 1.5em;
+  font-weight: 900;
+  font-size: 14px;
+  font-family: avenirb;
+  color: #613D2B;
+}
+.number .productPrice, .productQty{
+  margin-bottom: 0.3em;
+  font-size: 10px;
+  font-family: avenir;
+  color: #974A4A;
+}
+.number .subTotal{
+  margin-bottom: 0;
+  font-weight: 900;
+  font-size: 10px;
+  font-family: avenirb;
+  color: #974A4A;
+}
