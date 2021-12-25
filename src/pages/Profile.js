@@ -36,6 +36,8 @@ function Profile() {
           orderQuantity: elem.products[0].orderQuantity,
           subtotal: elem.products[0].price * elem.products[0].orderQuantity,
           status: elem.status,
+          day: days[(new Date(`${months[elem.date.split("T")[0].split('-')[1]-1]} ${elem.date.split("T")[0].split('-')[2]}, ${elem.date.split("T")[0].split('-')[0]}`)).getDay()],
+          date: `${elem.date.split("T")[0].split("-")[2]} ${months[elem.date.split("T")[0].split("-")[1]-1]} ${elem.date.split("T")[0].split("-")[0]}`,
         }
       })
       setTransaction(temp)
@@ -109,6 +111,7 @@ function Profile() {
                   <img src={elem.photo} alt="menu pict" />
                   <div className={styles.number}>
                     <p className={styles.productName}>{elem.name}</p>
+                    <p className={styles.date}><b>{elem.day}</b>, {elem.date}</p>
                     <p className={styles.productPrice}>Price : Rp {elem.price.toLocaleString('id-ID')}</p>
                     <p className={styles.productQty}>Qty : {elem.orderQuantity}</p>
                     <p className={styles.subTotal}>Sub Total : {(elem.subtotal).toLocaleString('id-ID')}</p>

@@ -14,6 +14,11 @@ function Shipment() {
   const [mod, setMod] = useState(false)
   const [orderedMenus, setOrderedMenus] = useContext(OrderContext);
   const [preview, setPreview] = useState(null);
+  const [today, setToday] = useState(null);
+  const [date, setDate] = useState(null);
+  const months = [ "January", "February", "March", "April", "May", "June", 
+           "July", "August", "September", "October", "November", "December" ];
+  const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -75,8 +80,19 @@ function Shipment() {
   const handModClose = () => {setMod(false); navigate('/profile');};
   const handMod = () => setMod(true);
 
+  const getDate = () => {
+    const today = new Date();
+    const date = today.getDate();
+    const month = today.getMonth();
+    const year = today.getFullYear();
+    const day = today.getDay();
+
+    setToday(days[day])
+    setDate(`${date} ${months[month]} ${year}`)
+  }
+
   useEffect(() => {
-    console.log(orderedMenus)
+    getDate()
   }, []);
 
   return (
@@ -150,6 +166,7 @@ function Shipment() {
                   <img src={elem.photo} alt="menu pict" />
                   <div className={styles.number}>
                     <p className={styles.productName}>{elem.name}</p>
+                    <p className={styles.date}><b>{today}</b>, {date}</p>
                     <p className={styles.productPrice}>Price : Rp {elem.price.toLocaleString('id-ID')}</p>
                     <p className={styles.productQty}>Qty : {elem.orderQuantity}</p>
                     <p className={styles.subTotal}>Sub Total : {(elem.price*elem.orderQuantity).toLocaleString('id-ID')}</p>

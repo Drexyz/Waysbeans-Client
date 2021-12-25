@@ -133,11 +133,21 @@
   flex-direction: column;
 }
 .number .productName{
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
   font-weight: 900;
   font-size: 14px;
   font-family: avenirb;
   color: #613D2B;
+}
+.number .date {
+  margin-bottom: 1.5em;
+  font-weight: 900;
+  font-size: 9px;
+  font-family: avenir;
+  color: #613D2B;
+}
+.number .date b{
+  font-family: avenirb;
 }
 .number .productPrice, .productQty{
   margin-bottom: 0.3em;
