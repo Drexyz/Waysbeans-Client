@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import styles from "../styles/Profile.module.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import QRCode from 'react-qr-code';
 
 //API config
 import { API } from "../config/api";
@@ -119,7 +120,9 @@ function Profile() {
                 </div>
                 <div className={styles.productr}>
                   <img src='images/icon.png' alt="waysbeans icon" className={styles.wbIcon}/>
-                  <img src='images/qr mock.png' alt="qr" className={styles.qr}/>
+                  <QRCode value={
+                    `Transaction Status: ${elem.status}`
+                  } size='50' fgColor='#232b2b'/>
                   {elem.status === 'success' ? (
                     <div className={styles.status}>Success</div>
                   ) : (elem.status === 'waiting approve' ? (
