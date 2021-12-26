@@ -11,6 +11,7 @@ import Cart from './pages/Cart';
 import Shipment from './pages/Shipment';
 import Profile from './pages/Profile';
 import AddProduct from './pages/AddProduct';
+import EditProfile from './pages/EditProfile';
 
 // Get API config & setAuthToken
 import { API, setAuthToken } from './config/api';
@@ -61,6 +62,7 @@ function App() {
         <Route path="shipment" element={<Shipment />} />
         <Route path="profile" element={<Profile />} />
         <Route path="addproduct" element={<AddProduct />} />
+        <Route path="/edit-profile" element={<EditProfile />} />
     </Routes>
   );
 }

@@ -1,13 +1,17 @@
 import Navbar from "../components/Navbar";
 import styles from "../styles/Profile.module.css";
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import QRCode from 'react-qr-code';
+
+//context
+import { UserContext } from '../context/userContext';
 
 //API config
 import { API } from "../config/api";
 
 function Profile() {
+  const [state, dispatch] = useContext(UserContext);
   const [profile, setProfile] = useState([]);
   const [transaction, setTransaction] = useState([]);
   const months = [ "January", "February", "March", "April", "May", "June", 
@@ -93,7 +97,9 @@ function Profile() {
           <div className={styles.myProfile}>
             <h4>My Profile</h4>
             <div className={styles.infoPerson}>
-              <img src={profile.photo} alt="Profil" />
+              <Link to={`/edit-profile`}>
+                <img src={profile.photo} alt="Profil" />
+              </Link>
               <article>
                 <h5>Full Name</h5>
                 <p>{profile.fullname}</p>

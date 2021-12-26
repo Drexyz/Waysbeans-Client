@@ -111,7 +111,7 @@ function Cart() {
     <div>
     <Navbar />
     
-      {subtotal === 0 ? (<div><img src="./images/404-your-cart-is-empty.png" 
+      {subtotal === 0 ? (<div className={styles.emptycart}><img src="./images/404-your-cart-is-empty.png" 
       alt="empty cart" className={styles.empty}/></div>) : (
       <>
       <h3 className={styles.myCart}>My Cart</h3>

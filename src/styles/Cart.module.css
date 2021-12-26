@@ -17,6 +17,11 @@
     font-weight: 900;
     font-size: 24px;
 }
+.emptycart {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
 .lines {
     display: flex;
     width: 1044px;
