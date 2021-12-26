@@ -21,6 +21,7 @@ function TransactionTable() {
             id: elem.id,
             name: elem.name,
             address: elem.address,
+            posscode: elem.posscode,
             order: elem.products[0].name,
             status: elem.status
           }
@@ -115,7 +116,7 @@ function TransactionTable() {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className={styles.Transactions}>
         <div className={styles.Transaction}>
           <h4>Income Transaction</h4>
           <table>
@@ -123,6 +124,7 @@ function TransactionTable() {
               <td className={styles.no}>No</td>
               <td className={styles.name}>Name</td>
               <td className={styles.address}>Address</td>
+              <td className={styles.post}>Post Code</td>
               <td className={styles.order}>Products Order</td>
               <td className={styles.status}>Status</td>
               <td className={styles.action}>Action</td>
@@ -133,6 +135,7 @@ function TransactionTable() {
                   <td>{index + 1}</td>
                   <td>{data.name}</td>
                   <td>{data.address}</td>
+                  <td>{data.posscode}</td>
                   <td>{data.order}</td>
                   {data.status === "waiting approve" ? (
                     <>

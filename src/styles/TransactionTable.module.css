@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
 
-.Transaction {
+.Transactions {
     margin-top: 73px;
-    margin-left: 150px;
+    display: flex;
+    justify-content: center;
 }
 .Transaction h4 {
     font-family: 'Abhaya Libre', serif;
@@ -42,6 +43,9 @@
 }
 .th .address {
     width: 280px;
+}
+.th .post {
+  width: 7em;
 }
 .th .order {
     width: 191px;

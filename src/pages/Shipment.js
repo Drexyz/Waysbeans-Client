@@ -23,6 +23,7 @@ function Shipment() {
     name: "",
     email: "",
     phone: "",
+    posscode: "",
     address: "",
     attachment: "",
   });
@@ -60,6 +61,7 @@ function Shipment() {
       formData.set('name', form.name);
       formData.set('email', form.email);
       formData.set('phone', form.phone);
+      formData.set('posscode', form.posscode);
       formData.set('address', form.address);
       formData.set('product', JSON.stringify(product));
       
@@ -124,6 +126,14 @@ function Shipment() {
               defaultValue={form.phone}
               onChange={handleChange}
               name='phone'
+            />
+            <input
+              type="tel"
+              placeholder="Poss Code"
+              className={styles.inputPhone}
+              defaultValue={form.posscode}
+              onChange={handleChange}
+              name='posscode'
             />
             <textarea
               placeholder="Address"
