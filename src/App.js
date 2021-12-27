@@ -12,6 +12,7 @@ import Shipment from './pages/Shipment';
 import Profile from './pages/Profile';
 import AddProduct from './pages/AddProduct';
 import EditProfile from './pages/EditProfile';
+import DetailTransaction from './pages/DetailTransaction';
 
 // Get API config & setAuthToken
 import { API, setAuthToken } from './config/api';
@@ -63,6 +64,7 @@ function App() {
         <Route path="profile" element={<Profile />} />
         <Route path="addproduct" element={<AddProduct />} />
         <Route path="/edit-profile" element={<EditProfile />} />
+        <Route path="transaction/:transactionId" element={<DetailTransaction />} />
     </Routes>
   );
 }

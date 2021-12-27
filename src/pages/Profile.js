@@ -114,6 +114,7 @@ function Profile() {
           {transaction.map(elem =>{
             return(
               <div className={styles.product} key={elem.id}>
+                <Link to={`/transaction/${elem.id}`} style={{ textDecoration: "none" }}>
                 <div className={styles.detailProduct}>
                   <img src={elem.photo} alt="menu pict" />
                   <div className={styles.number}>
@@ -124,6 +125,7 @@ function Profile() {
                     <p className={styles.subTotal}>Sub Total : {(elem.subtotal).toLocaleString('id-ID')}</p>
                   </div>
                 </div>
+                </Link>
                 <div className={styles.productr}>
                   <img src='images/icon.png' alt="waysbeans icon" className={styles.wbIcon}/>
                   <QRCode value={

@@ -1,0 +1,87 @@
+@font-face {
+  font-family: avenir;
+  src: url("./avenir_ff/AvenirLTStd-Book.otf") format("opentype");
+}
+@font-face {
+font-family: avenirb;
+src: url("./avenir_ff/AvenirLTStd-Black.otf") format("opentype");
+}
+.detailTransactions {
+  display: flex;
+  justify-content: space-between;
+  margin: 9vh 14vw;  
+}
+.detailTransactions h4 {
+  font-weight: 900;
+  font-size: 24px;
+  font-family: avenirb;
+  margin-bottom: 26px;
+  color: #613D2B;
+}
+.detailL p {
+  font-size: 18px;
+  font-family: avenirb;
+}
+.detailL b {
+  font-family: avenirb;
+  color: #613D2B;
+}
+
+/*/////////// R////////////// */
+.product {
+  width: 36vw;
+  height: 18vh;
+  background-color: #F6E6DA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product .detailProduct {
+  display: flex;
+}
+.product .wbIcon {
+  width: 5vw;
+  height: 3vh;
+  margin-bottom: 12vh;
+  margin-right: 2em;
+}
+.detailProduct img {
+  width: 5.6vw;
+  height: 15vh;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.detailProduct .number {
+  display: flex;
+  flex-direction: column;
+}
+.number .productName{
+  margin-bottom: 0;
+  font-weight: 900;
+  font-size: 14px;
+  font-family: avenirb;
+  color: #613D2B;
+}
+.number .date {
+  margin-bottom: 1.5em;
+  font-weight: 900;
+  font-size: 9px;
+  font-family: avenir;
+  color: #613D2B;
+}
+.date b {
+  font-family: avenirb;
+}
+.number .productPrice, .productQty{
+  margin-bottom: 0.3em;
+  font-size: 10px;
+  font-family: avenir;
+  color: #974A4A;
+}
+.number .subTotal{
+  margin-bottom: 0;
+  font-weight: 900;
+  font-size: 10px;
+  font-family: avenirb;
+  color: #974A4A;
+}
