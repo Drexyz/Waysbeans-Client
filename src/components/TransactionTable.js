@@ -1,6 +1,7 @@
 import styles from "../styles/TransactionTable.module.css";
 import React, { useState, useContext, useEffect } from "react";
 import Navbar from "../components/Navbar";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 //context
 import { UserContext } from '../context/userContext';
@@ -113,12 +114,102 @@ function TransactionTable() {
     }
   }
 
+  //filter transactions
+  const transactionsFWait = async () => {
+    try {
+      await API.get('/transactionf/waiting-approve').then((response) => {
+        const temp = response.data.data.transactions.map( elem => {
+          return {
+            id: elem.id,
+            name: elem.name,
+            address: elem.address,
+            posscode: elem.posscode,
+            order: elem.products[0].name,
+            status: elem.status
+          }
+        }) 
+        //console.log(temp)
+        setDatas(temp);
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const transactionsFWay = async () => {
+    try {
+      await API.get('/transactionf/on-the-way').then((response) => {
+        const temp = response.data.data.transactions.map( elem => {
+          return {
+            id: elem.id,
+            name: elem.name,
+            address: elem.address,
+            posscode: elem.posscode,
+            order: elem.products[0].name,
+            status: elem.status
+          }
+        }) 
+        console.log(temp)
+        setDatas(temp);
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const transactionsFCancel = async () => {
+    try {
+      await API.get('/transactionf/cancel').then((response) => {
+        const temp = response.data.data.transactions.map( elem => {
+          return {
+            id: elem.id,
+            name: elem.name,
+            address: elem.address,
+            posscode: elem.posscode,
+            order: elem.products[0].name,
+            status: elem.status
+          }
+        }) 
+        console.log(temp)
+        setDatas(temp);
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  const transactionsFSuccess = async () => {
+    try {
+      await API.get('/transactionf/success').then((response) => {
+        const temp = response.data.data.transactions.map( elem => {
+          return {
+            id: elem.id,
+            name: elem.name,
+            address: elem.address,
+            posscode: elem.posscode,
+            order: elem.products[0].name,
+            status: elem.status
+          }
+        }) 
+        console.log(temp)
+        setDatas(temp);
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div>
       <Navbar />
       <div className={styles.Transactions}>
         <div className={styles.Transaction}>
           <h4>Income Transaction</h4>
+          <DropdownButton id="dropdown-variants-secondary" variant="secondary" title="Filter"
+            style={{alignSelf:"flex-end", marginBottom:"0.5em"}}>
+            <Dropdown.Item onClick={transactionsFWait}>Waiting Approve</Dropdown.Item>
+            <Dropdown.Item onClick={transactionsFWay}>On The Way</Dropdown.Item>
+            <Dropdown.Item onClick={transactionsFCancel}>Cancel</Dropdown.Item>
+            <Dropdown.Item onClick={transactionsFSuccess}>Success</Dropdown.Item>
+            <Dropdown.Item onClick={getTransactions}>No Fliter</Dropdown.Item>
+          </DropdownButton>
           <table>
             <tr className={styles.th}>
               <td className={styles.no}>No</td>

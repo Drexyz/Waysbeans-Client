@@ -5,6 +5,11 @@
     margin-top: 73px;
     display: flex;
     justify-content: center;
+    margin-bottom: 73px;
+}
+.Transaction {
+  display: flex;
+  flex-direction: column;
 }
 .Transaction h4 {
     font-family: 'Abhaya Libre', serif;
@@ -62,7 +67,7 @@
     justify-content: space-around;
     border: none;
     align-items: center;
-    height: 39px;
+    height: 4em;
     padding-left: 0;
 }
 .Transaction td button {
